@@ -1,0 +1,11 @@
+<h1>Add a Comment</h1>
+<hr />
+<%= form_for [@topic, @comment] do |f| %>
+  <%= f.label :body %>
+  <%= f.text_field :body, required: true %>
+  <br />
+  <%= f.label :author %>
+  <%= f.text_field :author, placeholder: 'Leave blank for anon' %>
+  <br />
+  <%= f.submit %>
+<% end %>
